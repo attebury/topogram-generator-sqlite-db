@@ -1,0 +1,31 @@
+{
+  "id": "@attebury/topogram-generator-sqlite-db",
+  "version": "1",
+  "surface": "database",
+  "targetKind": "database",
+  "projectionPlatforms": [
+    "db_sqlite"
+  ],
+  "inputs": [
+    "db-contract",
+    "db-lifecycle-plan"
+  ],
+  "outputs": [
+    "db-lifecycle-bundle",
+    "sql-schema",
+    "sql-migration",
+    "prisma-schema"
+  ],
+  "stack": {
+    "database": "sqlite",
+    "language": "sql"
+  },
+  "capabilities": {
+    "lifecycle": true,
+    "migrations": true,
+    "prisma": true,
+    "drizzle": false
+  },
+  "source": "package",
+  "package": "@attebury/topogram-generator-sqlite-db"
+}
