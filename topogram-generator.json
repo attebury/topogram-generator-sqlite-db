@@ -1,5 +1,5 @@
 {
-  "id": "@attebury/topogram-generator-sqlite-db",
+  "id": "@topogram/generator-sqlite-db",
   "version": "1",
   "surface": "database",
   "targetKind": "database",
@@ -27,5 +27,5 @@
     "drizzle": false
   },
   "source": "package",
-  "package": "@attebury/topogram-generator-sqlite-db"
+  "package": "@topogram/generator-sqlite-db"
 }
