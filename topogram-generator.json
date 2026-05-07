@@ -2,10 +2,6 @@
   "id": "@topogram/generator-sqlite-db",
   "version": "1",
   "surface": "database",
-  "targetKind": "database",
-  "projectionPlatforms": [
-    "db_sqlite"
-  ],
   "inputs": [
     "db-contract",
     "db-lifecycle-plan"
@@ -27,5 +23,11 @@
     "drizzle": false
   },
   "source": "package",
-  "package": "@topogram/generator-sqlite-db"
+  "package": "@topogram/generator-sqlite-db",
+  "runtimeKinds": [
+    "database"
+  ],
+  "projectionTypes": [
+    "db_contract"
+  ]
 }

@@ -151,7 +151,7 @@ function renderPrisma(tables) {
 function renderLifecyclePlan(context, tables) {
   return `${JSON.stringify(context.contracts?.lifecyclePlan || {
     type: "db_lifecycle_plan",
-    projection: { id: context.projection?.id || null, platform: context.projection?.platform || "db_sqlite" },
+    projection: { id: context.projection?.id || null, type: context.projection?.type || "db_contract" },
     engine: "sqlite",
     tables: tables.map((table) => table.table),
     state: {
@@ -193,7 +193,7 @@ function generate(context) {
     "scripts/check.mjs": "import fs from 'node:fs'; for (const file of ['schema.sql', 'migrations/0001_init.sql', 'prisma/schema.prisma', 'lifecycle.plan.json']) { if (!fs.existsSync(file)) throw new Error(`missing ${file}`); } console.log('Checked SQLite database lifecycle bundle.');\n",
     "scripts/migration-plan.mjs": "import fs from 'node:fs'; console.log(fs.readFileSync('lifecycle.plan.json', 'utf8'));\n",
     "scripts/migrate.mjs": "console.log('Apply migrations/0001_init.sql with your SQLite migration runner.');\n",
-    "README.md": `# ${safeContext.component?.id || "SQLite DB"}\n\nGenerated SQLite lifecycle bundle for projection \`${safeContext.projection?.id || "unknown"}\`.\n\nRun \`npm run check\` to verify generated lifecycle files.\n`
+    "README.md": `# ${safeContext.widget?.id || "SQLite DB"}\n\nGenerated SQLite lifecycle bundle for projection \`${safeContext.projection?.id || "unknown"}\`.\n\nRun \`npm run check\` to verify generated lifecycle files.\n`
   };
   return {
     files,

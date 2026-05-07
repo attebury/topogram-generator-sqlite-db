@@ -6,7 +6,7 @@ Package-backed Topogram generator for SQLite database lifecycle bundles.
 
 - Generator id: `@topogram/generator-sqlite-db`
 - Surface: `database`
-- Projection platform: `db_sqlite`
+- Projection type: `db_sqlite`
 - Package manifest: `topogram-generator.json`
 - Adapter export: `index.cjs`
 
